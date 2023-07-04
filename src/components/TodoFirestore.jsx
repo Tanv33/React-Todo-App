@@ -33,6 +33,7 @@ function TodoFirestore() {
     const unsubscribe = onSnapshot(q, (snapshot) => {
       let arr = [];
       snapshot.forEach((doc) => {
+        console.log(doc)
         let id = doc.id;
         let data = doc.data();
         arr.unshift({
